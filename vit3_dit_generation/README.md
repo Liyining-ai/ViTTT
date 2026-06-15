@@ -6,9 +6,12 @@ This folder provides the DiT-based image generation code used in our $\text{ViT}
 
 The released checkpoints for different DiT model sizes are available here:
 
-| Model Family | Dataset | Image Resolution | Checkpoints |
-| :---: | :---: | :---: | :---: |
-| $\text{DiT}^3$ | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |
+| Model | Dataset | Image Resolution | Checkpoint | FID |
+| :---: | :---: | :---: | :---: | :---: |
+| $\text{DiT}^3$-S/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
+| $\text{DiT}^3$-B/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
+| $\text{DiT}^3$-L/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
+| $\text{DiT}^3$-XL/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
 
 
 ## Usage
