@@ -11,7 +11,7 @@ The released checkpoints for different DiT model sizes are available here:
 | $\text{DiT}^3$-S/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
 | $\text{DiT}^3$-S/4 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
 | $\text{DiT}^3$-S/8 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
-| $\text{DiT}^3$-B/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
+| $\text{DiT}^3$-B/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |39.44|
 | $\text{DiT}^3$-B/4 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
 | $\text{DiT}^3$-B/8 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |  |
 
