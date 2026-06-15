@@ -8,7 +8,7 @@ The released checkpoints for different DiT model sizes are available here:
 
 | Model Family | Dataset | Image Resolution | Checkpoints |
 | :---: | :---: | :---: | :---: |
-| $\text{ViT}^3$-DiT | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |
+| $\text{DiT}^3$ | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) |
 
 Please download the desired checkpoint and place it under `./pretrained_models/`, for example:
 
