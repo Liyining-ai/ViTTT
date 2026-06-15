@@ -1,6 +1,6 @@
 # $\text{ViT}^3$ for Image Generation
 
-This folder provides the DiT-based image generation code used in our $\text{ViT}^3$ experiments. The code follows the official [DiT](https://github.com/facebookresearch/DiT) implementation, with the $\text{ViT}^3$ / TTT model components integrated for class-conditional ImageNet generation.
+This folder provides the DiT-based image generation code used in our $\text{ViT}^3$ experiments. The code follows the official [DiT](https://github.com/facebookresearch/DiT) implementation, with the $\text{ViT}^3$ model components integrated for class-conditional ImageNet generation.
 
 ## Results and Models
 
