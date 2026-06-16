@@ -43,13 +43,13 @@ To train a $\text{DiT}^3$-S/2 model on ImageNet 256 $\times$ 256, run:
 
 ```bash
 torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> train.py \
-  --model DiT-S/2 \
+  --model DiT3-S/2 \
   --data-path /data/imagenet/train \
   --image-size 256 \
   --global-batch-size 256
 ```
 
-You can change `--model` to other supported DiT variants, such as `DiT-B/2`, `DiT-L/2`, or `DiT-XL/2`, if the corresponding configuration and checkpoint are used.
+You can change `--model` to other supported DiT variants, such as `DiT3-B/2`, `DiT3-L/2`, or `DiT3-XL/2`, if the corresponding configuration and checkpoint are used.
 
 ### Inference
 
@@ -57,7 +57,7 @@ To sample images from a trained checkpoint, run:
 
 ```bash
 python sample.py \
-  --model DiT-S/2 \
+  --model DiT3-S/2 \
   --image-size 256 \
   --ckpt ./pretrained_models/dit3_s2_256.pt \
   --cfg-scale 4.0 \
@@ -73,7 +73,7 @@ Following the official DiT evaluation pipeline, first generate 50K samples with 
 
 ```bash
 torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> sample_ddp.py \
-  --model DiT-S/2 \
+  --model DiT3-S/2 \
   --image-size 256 \
   --ckpt ./pretrained_models/dit3_s2_256.pt \
   --num-fid-samples 50000 \
