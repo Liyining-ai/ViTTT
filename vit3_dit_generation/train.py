@@ -27,7 +27,7 @@ import argparse
 import logging
 import os
 
-from models import DiT_models
+from models import DiTTT_models
 from diffusion import create_diffusion
 from diffusers.models import AutoencoderKL
 
