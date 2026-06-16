@@ -39,7 +39,7 @@ Prepare ImageNet in the standard folder format :
 
 ### Training
 
-To train a $\text{ViT}^3$-DiT-S/2 model on ImageNet 256 $\times$ 256, run:
+To train a $\text{DiT}^3$-S/2 model on ImageNet 256 $\times$ 256, run:
 
 ```bash
 torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> train.py \
