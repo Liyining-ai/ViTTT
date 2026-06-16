@@ -28,7 +28,7 @@ conda activate DiT
 
 ### Dataset Preparation
 
-Prepare ImageNet in the standard folder format expected by `torchvision.datasets.ImageFolder`:
+Prepare ImageNet in the standard folder format :
 
 ```text
 /path/to/imagenet/train/
