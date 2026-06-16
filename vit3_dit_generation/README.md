@@ -9,8 +9,8 @@ The released checkpoints for different DiT model sizes are available here:
 | Model | Dataset | Image Resolution | Checkpoint | FID | IS | Prec. | Rec. |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | $\text{DiT}^3$-B/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/f/c68d33055c6b44f39584/?dl=1) | 39.44 | 37.22 | 0.51 | 0.63  |
-| $\text{DiT}^3$-B/4 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) | 65.25 |22.28  |0.37  |0.55  |
-| $\text{DiT}^3$-B/8 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/10ca7e31adb54147b526/) | 120.82 |10.87  |0.20  | 0.26 |
+| $\text{DiT}^3$-B/4 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/f/49a2ea7a60624a8a94f3/?dl=1) | 65.25 |22.28  |0.37  |0.55  |
+| $\text{DiT}^3$-B/8 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/f/d09682e5b50d40d48f4e/?dl=1) | 120.82 |10.87  |0.20  | 0.26 |
 
 
 
