@@ -25,11 +25,6 @@ conda env create -f environment.yml
 conda activate DiT
 ```
 
-Install extra packages if your local environment does not already include them:
-
-```bash
-pip install timm diffusers accelerate
-```
 
 ### Dataset Preparation
 
