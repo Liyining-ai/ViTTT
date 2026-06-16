@@ -78,7 +78,7 @@ torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> sample_ddp.py \
   --ckpt ./pretrained_models/dit3_s2_256.pt \
   --num-fid-samples 50000 \
   --sample-dir samples \
-  --cfg-scale 1.5 \
+  --cfg-scale 1 \
   --num-sampling-steps 250
 ```
 
