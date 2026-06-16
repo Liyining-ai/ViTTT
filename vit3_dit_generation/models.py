@@ -334,46 +334,46 @@ def get_1d_sincos_pos_embed_from_grid(embed_dim, pos):
 #                                   DiT Configs                                  #
 #################################################################################
 
-def DiT3_XL_2(**kwargs):
+def DiTTT_XL_2(**kwargs):
     return DiT(depth=28, hidden_size=1152, patch_size=2, num_heads=16, **kwargs)
 
-def DiT3_XL_4(**kwargs):
+def DiTTT_XL_4(**kwargs):
     return DiT(depth=28, hidden_size=1152, patch_size=4, num_heads=16, **kwargs)
 
-def DiT3_XL_8(**kwargs):
+def DiTTT_XL_8(**kwargs):
     return DiT(depth=28, hidden_size=1152, patch_size=8, num_heads=16, **kwargs)
 
-def DiT3_L_2(**kwargs):
+def DiTTT_L_2(**kwargs):
     return DiT(depth=24, hidden_size=1024, patch_size=2, num_heads=16, **kwargs)
 
-def DiT3_L_4(**kwargs):
+def DiTTT_L_4(**kwargs):
     return DiT(depth=24, hidden_size=1024, patch_size=4, num_heads=16, **kwargs)
 
-def DiT3_L_8(**kwargs):
+def DiTTT_L_8(**kwargs):
     return DiT(depth=24, hidden_size=1024, patch_size=8, num_heads=16, **kwargs)
 
-def DiT3_B_2(**kwargs):
+def DiTTT_B_2(**kwargs):
     return DiT(depth=12, hidden_size=768, patch_size=2, num_heads=12, **kwargs)
 
-def DiT3_B_4(**kwargs):
+def DiTTT_B_4(**kwargs):
     return DiT(depth=12, hidden_size=768, patch_size=4, num_heads=12, **kwargs)
 
-def DiT3_B_8(**kwargs):
+def DiTTT_B_8(**kwargs):
     return DiT(depth=12, hidden_size=768, patch_size=8, num_heads=12, **kwargs)
 
-def DiT3_S_2(**kwargs):
+def DiTTT_S_2(**kwargs):
     return DiT(depth=12, hidden_size=384, patch_size=2, num_heads=6, **kwargs)
 
-def DiT3_S_4(**kwargs):
+def DiTTT_S_4(**kwargs):
     return DiT(depth=12, hidden_size=384, patch_size=4, num_heads=6, **kwargs)
 
-def DiT3_S_8(**kwargs):
+def DiTTT_S_8(**kwargs):
     return DiT(depth=12, hidden_size=384, patch_size=8, num_heads=6, **kwargs)
 
 
-DiT3_models = {
-    'DiT3-XL/2': DiT3_XL_2,  'DiT3-XL/4': DiT3_XL_4,  'DiT3-XL/8': DiT3_XL_8,
-    'DiT3-L/2':  DiT3_L_2,   'DiT3-L/4':  DiT3_L_4,   'DiT3-L/8':  DiT3_L_8,
-    'DiT3-B/2':  DiT3_B_2,   'DiT3-B/4':  DiT3_B_4,   'DiT3-B/8':  DiT3_B_8,
-    'DiT3-S/2':  DiT3_S_2,   'DiT3-S/4':  DiT3_S_4,   'DiT3-S/8':  DiT3_S_8,
+DiTTT_models = {
+    'DiTTT-XL/2': DiTTT_XL_2,  'DiTTT-XL/4': DiTTT_XL_4,  'DiTTT-XL/8': DiTTT_XL_8,
+    'DiTTT-L/2':  DiTTT_L_2,   'DiTTT-L/4':  DiTTT_L_4,   'DiTTT-L/8':  DiTTT_L_8,
+    'DiTTT-B/2':  DiTTT_B_2,   'DiTTT-B/4':  DiTTT_B_4,   'DiTTT-B/8':  DiTTT_B_8,
+    'DiTTT-S/2':  DiTTT_S_2,   'DiTTT-S/4':  DiTTT_S_4,   'DiTTT-S/8':  DiTTT_S_8,
 }
