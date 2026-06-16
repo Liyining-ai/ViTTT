@@ -1,0 +1,110 @@
+# $\text{ViT}^3$ for Image Generation
+
+This folder provides the DiT-based image generation code used in our $\text{ViT}^3$ experiments. The code follows the official [DiT](https://github.com/facebookresearch/DiT) implementation, with the $\text{ViT}^3$ model components integrated for class-conditional ImageNet generation.
+
+## Results and Models
+
+The released checkpoints for different DiTTT model sizes are available here:
+
+| Model | Dataset | Image Resolution | Checkpoint | FID | IS | Prec. | Rec. |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| $\text{DiT}^3$-B/2 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/f/c68d33055c6b44f39584/?dl=1) | 39.44 | 37.22 | 0.51 | 0.63  |
+| $\text{DiT}^3$-B/4 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/f/49a2ea7a60624a8a94f3/?dl=1) | 65.25 |22.28  |0.37  |0.55  |
+| $\text{DiT}^3$-B/8 | ImageNet-1K | 256 $\times$ 256 | [TsinghuaCloud](https://cloud.tsinghua.edu.cn/f/d09682e5b50d40d48f4e/?dl=1) | 120.82 |10.87  |0.20  | 0.26 |
+
+For example, download the B/2 checkpoint and place it under `pretrained_models/dittt_b2_256.pt` before running the sampling command below.
+
+
+
+## Usage
+
+### Installation
+
+The environment is the same as the official [DiT](https://github.com/facebookresearch/DiT) codebase. 
+
+```bash
+conda env create -f environment.yml
+conda activate DiTTT
+```
+
+
+### Dataset Preparation
+
+Prepare ImageNet in the standard folder format :
+
+```text
+/path/to/imagenet/train/
+  n01440764/
+  n01443537/
+  ...
+```
+
+### Training
+
+To train a $\text{DiT}^3$-B/2 model on ImageNet 256 $\times$ 256, run:
+
+```bash
+torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> train.py \
+  --model DiTTT-B/2 \
+  --data-path /path/to/imagenet/train \
+  --image-size 256 \
+  --global-batch-size 256
+```
+
+You can change `--model` to other supported DiT variants, such as `DiTTT-B/2`, `DiTTT-L/2`, or `DiTTT-XL/2`, if the corresponding configuration and checkpoint are used.
+
+### Inference
+
+To sample images from a trained checkpoint, run:
+
+```bash
+python sample.py \
+  --model DiTTT-B/2 \
+  --image-size 256 \
+  --ckpt ./pretrained_models/dittt_b2_256.pt \
+  --cfg-scale 4.0 \
+  --num-sampling-steps 250 \
+  --seed 0
+```
+
+The generated image grid will be saved as `sample.png`.
+
+### Evaluation
+
+Following the official DiT evaluation pipeline, first generate 50K samples with `sample_ddp.py`:
+
+```bash
+torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> sample_ddp.py \
+  --model DiTTT-B/2 \
+  --image-size 256 \
+  --ckpt ./pretrained_models/dittt_b2_256.pt \
+  --num-fid-samples 50000 \
+  --sample-dir samples \
+  --cfg-scale 1 \
+  --num-sampling-steps 250
+```
+
+This will save generated images and an `.npz` sample batch under `samples/`. To compute FID, Inception Score, sFID, Precision, and Recall, use the TensorFlow evaluation suite from [OpenAI guided-diffusion](https://github.com/openai/guided-diffusion/tree/main/evaluations):
+
+```bash
+python evaluator.py /path/to/VIRTUAL_imagenet256_labeled.npz /path/to/generated_samples.npz
+```
+
+Please refer to the guided-diffusion evaluation README for downloading the ImageNet reference batch.
+
+## Citation
+
+If you find this repo helpful, please consider citing us.
+
+```bibtex
+@inproceedings{han2026vit3,
+  title={ViT$^3$: Unlocking Test-Time Training in Vision},
+  author={Han, Dongchen and Li, Yining and Li, Tianyu and Cao, Zixuan and Wang, Ziming and Song, Jun and Cheng, Yu and Zheng, Bo and Huang, Gao},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2026}
+}
+```
+
+## Acknowledgments
+
+This codebase is built upon the official [DiT](https://github.com/facebookresearch/DiT) implementation. We also follow the evaluation protocol from [OpenAI guided-diffusion](https://github.com/openai/guided-diffusion/tree/main/evaluations).
