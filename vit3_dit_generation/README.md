@@ -18,7 +18,7 @@ The released checkpoints for different DiT model sizes are available here:
 
 ### Installation
 
-The environment is the same as the official [DiT](https://github.com/facebookresearch/DiT) codebase. You can either use the provided `environment.yml` or follow the DiT installation instructions.
+The environment is the same as the official [DiT](https://github.com/facebookresearch/DiT) codebase. 
 
 ```bash
 conda env create -f environment.yml
