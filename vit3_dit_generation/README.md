@@ -59,7 +59,7 @@ To sample images from a trained checkpoint, run:
 python sample.py \
   --model DiT-S/2 \
   --image-size 256 \
-  --ckpt ./pretrained_models/vit3_dit_s2_256.pt \
+  --ckpt ./pretrained_models/dit3_s2_256.pt \
   --cfg-scale 4.0 \
   --num-sampling-steps 250 \
   --seed 0
@@ -75,7 +75,7 @@ Following the official DiT evaluation pipeline, first generate 50K samples with 
 torchrun --nnodes=1 --nproc_per_node=<GPU_NUM> sample_ddp.py \
   --model DiT-S/2 \
   --image-size 256 \
-  --ckpt ./pretrained_models/vit3_dit_s2_256.pt \
+  --ckpt ./pretrained_models/dit3_s2_256.pt \
   --num-fid-samples 50000 \
   --sample-dir samples \
   --cfg-scale 1.5 \
